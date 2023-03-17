@@ -7,7 +7,7 @@ public class MarsRover {
         this.orientation = orientation;
     }
 
-    public String getOrientation() {
+    private String getOrientation() {
         return orientation;
     }
 
