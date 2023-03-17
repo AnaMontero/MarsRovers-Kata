@@ -27,4 +27,12 @@ public class MarsRoverShould {
         String actual = rover.turnLeft();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void lookWestWhenTurningLeftAndOriginalDirectionIsNorth(){
+        var expected = "W";
+        MarsRover rover = new MarsRover("N");
+        String actual = rover.turnLeft();
+        assertEquals(expected, actual);
+    }
 }
