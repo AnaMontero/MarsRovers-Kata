@@ -1,5 +1,7 @@
 import marsrovers.kata.MarsRover;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,12 +14,14 @@ public class MarsRoverShould {
 
     //Assert: manera de ver si el test está ok o ko
 
-    @Test
-    public void lookEastWhenTurningLeftAndOriginalDirectionIsSouth(){
-        var expected = "E";
-        MarsRover rover = new MarsRover("S");
+    @ParameterizedTest
+    @CsvSource({
+            "S, E"
+    })
+    public void lookEastWhenTurningLeftAndOriginalDirectionIsSouth(String currentOrientation, String expectedOrientation){
+        MarsRover rover = new MarsRover(currentOrientation);
         String actual = rover.turnLeft();
-        assertEquals(expected, actual);
+        assertEquals(expectedOrientation, actual);
     }
 
     @Test
