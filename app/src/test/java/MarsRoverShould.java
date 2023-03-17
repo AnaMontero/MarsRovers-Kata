@@ -19,4 +19,12 @@ public class MarsRoverShould {
         String actual = rover.turnLeft();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void lookNorthWhenTurningLeftAndOriginalDirectionIsEast(){
+        var expected = "N";
+        MarsRover rover = new MarsRover();
+        String actual = rover.turnLeft();
+        assertEquals(expected, actual);
+    }
 }
