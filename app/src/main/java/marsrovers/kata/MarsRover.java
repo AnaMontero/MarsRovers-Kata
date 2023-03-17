@@ -1,5 +1,7 @@
 package marsrovers.kata;
 
+import java.util.HashMap;
+
 public class MarsRover {
     private final String orientation;
 
@@ -12,13 +14,14 @@ public class MarsRover {
     }
 
     public String turnLeft() {
-        if (getOrientation().equals("S")){
-            return "E";
-        }
-        if (getOrientation().equals("N")){
-            return "W";
-        }
-    return "N";
+        HashMap<String, String> relacionDeGiroALaDerecha = new HashMap<String, String>();
+
+        relacionDeGiroALaDerecha.put("S", "E");
+        relacionDeGiroALaDerecha.put("E", "N");
+        relacionDeGiroALaDerecha.put("N", "W");
+        relacionDeGiroALaDerecha.put("W", "S");
+
+        return relacionDeGiroALaDerecha.get(getOrientation());
     }
 
 }

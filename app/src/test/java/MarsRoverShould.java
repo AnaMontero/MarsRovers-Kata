@@ -17,7 +17,8 @@ public class MarsRoverShould {
     @CsvSource({
             "S, E",
             "E, N",
-            "N, W"
+            "N, W",
+            "W, S"
     })
     public void turnLeftDependingOnCurrentPosition(String currentOrientation, String expectedOrientation){
         MarsRover rover = new MarsRover(currentOrientation);
