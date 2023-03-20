@@ -5,14 +5,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MarsRoverShould {
-    //Dado que el Rover está mirando hacia el sur (S), y gira a la izquierda (L), pues acaba mirando al este (E)
-
-    //Arrange: variables
-
-    // Act: logica negocio
-
-    //Assert: manera de ver si el test está ok o ko
-
     @ParameterizedTest
     @CsvSource({
             "S, E",
