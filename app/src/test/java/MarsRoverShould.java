@@ -23,6 +23,7 @@ public class MarsRoverShould {
             "S, W",
             "W, N",
             "N, E",
+            "E, S"
     })
     public void turnRightDependingOnCurrentPosition(String currentOrientation, String expectedOrientation){
         MarsRover rover = new MarsRover(currentOrientation);
