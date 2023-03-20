@@ -26,13 +26,13 @@ public class MarsRover {
     }
 
     public String turnRight() {
-        if(getOrientation().equals("W")){
-            return "N";
-        }
+        Map<String, String> orientationRelationsWhenTurningRight = new HashMap<>() {{
+            put("S", "W");
+            put("W", "N");
+            put("N", "E");
+            put("E", "S");
+        }};
 
-        if(getOrientation().equals("N")){
-            return "E";
-        }
-        return "W";
+        return orientationRelationsWhenTurningRight.get(getOrientation());
     }
 }
