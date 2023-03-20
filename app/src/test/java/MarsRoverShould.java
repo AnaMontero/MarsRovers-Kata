@@ -17,4 +17,14 @@ public class MarsRoverShould {
         String actual = rover.turnLeft();
         assertEquals(expectedOrientation, actual);
     }
+
+    @ParameterizedTest
+    @CsvSource({
+            "S, W"
+    })
+    public void turnRightDependingOnCurrentPosition(String currentOrientation, String expectedOrientation){
+        MarsRover rover = new MarsRover(currentOrientation);
+        String actual = rover.turnRight();
+        assertEquals(expectedOrientation, actual);
+    }
 }

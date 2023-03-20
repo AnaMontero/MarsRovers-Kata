@@ -24,4 +24,8 @@ public class MarsRover {
 
         return orientationRelationsWhenTurningLeft.get(getOrientation());
     }
+
+    public String turnRight() {
+        return "";
+    }
 }
