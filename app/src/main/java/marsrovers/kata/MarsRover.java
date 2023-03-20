@@ -26,6 +26,6 @@ public class MarsRover {
     }
 
     public String turnRight() {
-        return "";
+        return "W";
     }
 }
