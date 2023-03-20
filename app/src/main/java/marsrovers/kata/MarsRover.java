@@ -29,6 +29,10 @@ public class MarsRover {
         if(getOrientation().equals("W")){
             return "N";
         }
+
+        if(getOrientation().equals("N")){
+            return "E";
+        }
         return "W";
     }
 }
