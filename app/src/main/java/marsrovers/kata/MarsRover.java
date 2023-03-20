@@ -26,6 +26,9 @@ public class MarsRover {
     }
 
     public String turnRight() {
+        if(getOrientation().equals("W")){
+            return "N";
+        }
         return "W";
     }
 }
