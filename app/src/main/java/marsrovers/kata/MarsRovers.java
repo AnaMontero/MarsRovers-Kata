@@ -3,10 +3,10 @@ package marsrovers.kata;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MarsRover {
+public class MarsRovers {
     private final String orientation;
 
-    public MarsRover(String orientation) {
+    public MarsRovers(String orientation) {
         this.orientation = orientation;
     }
 
