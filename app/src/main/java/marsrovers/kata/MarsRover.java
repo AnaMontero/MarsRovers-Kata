@@ -24,4 +24,15 @@ public class MarsRover {
 
         return orientationRelationsWhenTurningLeft.get(getOrientation());
     }
+
+    public String turnRight() {
+        Map<String, String> orientationRelationsWhenTurningRight = new HashMap<>() {{
+            put("S", "W");
+            put("W", "N");
+            put("N", "E");
+            put("E", "S");
+        }};
+
+        return orientationRelationsWhenTurningRight.get(getOrientation());
+    }
 }
