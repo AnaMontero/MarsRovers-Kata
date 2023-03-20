@@ -21,7 +21,8 @@ public class MarsRoverShould {
     @ParameterizedTest
     @CsvSource({
             "S, W",
-            "W, N"
+            "W, N",
+            "N, E",
     })
     public void turnRightDependingOnCurrentPosition(String currentOrientation, String expectedOrientation){
         MarsRover rover = new MarsRover(currentOrientation);
